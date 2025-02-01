@@ -1,7 +1,7 @@
-# 2025-ITELEC2-WK02S01E02
+# 2025-ITELEC2-WK02S01E03
 Week 02 - Python Variables, Operators and I/O Statements
 
-Exercise # 02 - Guided Coding Exercise: Input, Output, and Text Formatting in Python
+Exercise # 03 - Arithmetic Operators and Operator Precedence in Python
 
 ## **Instructions**
 
@@ -77,85 +77,108 @@ Only perform this if this is the first time you will setup your Git Environment
 
 ### **Step 3: Complete the Assignment**
 
-**Exercise # 02 - Guided Coding Exercise: Input, Output, and Text Formatting in Python**
+**Exercise # 03 - Arithmetic Operators and Operator Precedence in Python**
 
    **Objective:**
-      1. Get input from the user using the `input()` function.
-      2. Convert user input (which is initially a string) to the correct data type (integer or float).
-      3. Display formatted output using old-style string formatting (the % operator).
+   - Familiarize you with Python's arithmetic operators (+, -, *, /, %, //, **).
+   - Demonstrate how Python handles operator precedence (the order in which operations are performed).
+   - Show how to use parentheses to control the order of operations.
 
-   **Desired Output (Example - will vary based on user input):**
+   **Desired Output:**
    
 ```bash
-Enter an integer: 123
-Enter a decimal number: 3.14159
-Enter a string: Hello, Python!
-Formatted Output using old-style formatting:
-Integer: 123
-Decimal: 3.14
-String: Hello, Python!
-Formatted Output using f-strings:
-Integer: 123
-Decimal: 3.14
-String: Hello, Python!
+Result of a + b * c: 25
+Result of (a + b) * c: 45
+Result of a - b: 5
+Result of a / b: 2.0
+Result of a // b (floor division): 2
+Result of a % b (modulus): 0
+Result of a ** c (exponentiation): 1000
+Result of (a + b - c) * (a / b): 30.0
 ```
       
    **Notable Observations (to be discussed after completing the exercise):**
-   - The `input()` function always returns a string, even if the user enters a number. You must convert it to the correct type.
-   - Old-style string formatting (%) is one way to format output. F-strings (introduced later in the exercise) are the more modern and often preferred way.
-   - Formatting specifiers control how the values are displayed (e.g., number of decimal places).
+   - Python follows standard operator precedence rules (like in mathematics):
+      - Parentheses () have the highest precedence.
+      - Exponentiation ** is performed next.
+      - Multiplication *, division /, floor division //, and modulus % are performed next, from left to right.
+      - Addition + and subtraction - are performed last, from left to right.
+   - Parentheses can be used to group operations and force a specific order of evaluation.
+   - The modulus operator % gives the remainder of a division.
+   - The exponentiation operator ** raises a number to a power.
+   - / performs standard division resulting in a float.
+   - // performs floor division resulting in an integer (discarding the decimal part).
 
    **Step-by-Step Instructions:**
 
    1. Setting up: Open your preferred Python environment or Text Editor, and create a Python Script.
-      - Required Filename: `exercise_02.py`
+      - Required Filename: `exercise_03.py`
       
-   2.  Get integer input:
-       - Use the `input()` function to prompt the user to enter an integer. Store the returned value in a variable named `user_integer`.
-       - *Crucially*, convert the input string to an integer using the `int()` function.
-
-```python
-user_integer = int(input("Enter an integer: "))
-```
+   2.  Define numeric variables:
+       - Declare three variables named `a`, `b`, and `c`. Assign them integer values (e.g., `a = 10`, `b = 5`, `c = 3`).
+         ```python
+         a = 10
+         b = 5
+         c = 3
+         ```
       
-   4. Get decimal (float) input:
-      - Use the `input()` function to prompt the user to enter a decimal number. Store the returned value in a variable named `user_decimal`.
-      - *Crucially*, convert the input string to a float using the `float()` function.
-```python
-user_decimal = float(input("Enter a decimal number: "))
-```
+   3.  Calculate expressions without parentheses (demonstrating precedence):
+      - Calculate the expression `a + b * c` and store the result in a variable named `result1`. (Multiplication before addition)
+      - Print the value of `result1` with a descriptive label.
+         ```python
+         result1 = a + b * c
+         print("Result of a + b * c:", result1)
+         ```
 
-   5. Get string input:
-      - Use the `input()` function to prompt the user to enter a string. Store the returned value in a variable named `user_text`. No conversion is needed here, as `input()` already returns a string.
-```python
-user_text = input("Enter a string: ")
-```
+   4. Calculate expressions with parentheses (overriding precedence):
+      - Calculate the expression `(a + b) * c` and store the result in a variable named `result2`. (Addition within parentheses first)
+      - Print the value of result2 with a descriptive label.
+         ```python
+         result2 = (a + b) * c
+         print("Result of (a + b) * c:", result2)
+         ```
 
-   6. Display formatted output (old-style):
-      - Use the `print()` function along with the `%` operator to display the values of the three variables in a formatted way.
-      - Use `%d` as the format specifier for the integer, `%.2f` for the decimal (formatted to two decimal places), and `%s` for the string.
-```python
-print("Formatted Output using old-style formatting:")
-print("Integer: %d" % user_integer)
-print("Decimal: %.2f" % user_decimal)
-print("String: %s" % user_text)
-```
+   5. Use subtraction:
+      - Calculate a - b and store the result in result3.
+      - Print the value of result3 with a descriptive label.
+         ```python
+         result3 = a - b
+         print("Result of a - b:", result3)
+         ```
 
-   7. Display formatted output (f-strings - Modern Approach):
-      - Use an f-string to display the same information. F-strings are more readable and generally preferred.
-```python
-print("Formatted Output using f-strings:")
-print(f"Integer: {user_integer}")
-print(f"Decimal: {user_decimal:.2f}")  # Format decimal to two places
-print(f"String: {user_text}")
-```
+   6. Use standard and floor division:
+      - Calculate a / b (standard division) and store the result in result4.
+      - Calculate a // b (floor division) and store the result in result5.
+      - Print the values of result4 and result5 with descriptive labels.
+         ```python
+         result4 = a / b
+         result5 = a // b
+         print("Result of a / b:", result4)
+         print("Result of a // b (floor division):", result5)
+         ```
+         
+   7. Use modulus and exponentiation:
+      - Calculate a % b (modulus) and store the result in result6.
+      - Calculate a ** c (exponentiation) and store the result in result7.
+      - Print the values of result6 and result7 with descriptive labels.
+         ```python
+         result6 = a % b
+         result7 = a ** c
+         print("Result of a % b (modulus):", result6)
+         print("Result of a ** c (exponentiation):", result7)
+         ```
+         
+   8. Combine operators in a more complex expression:
+      - Calculate (a + b - c) * (a / b) and store the result in result8. This combines multiple operators and parentheses.
+      - Print the value of result8 with a descriptive label.
+         ```python
+         result8 = (a + b - c) * (a / b)
+         print("Result of (a + b - c) * (a / b):", result8)
+         ```
 
-   8. Run the code: Execute your Python code.
-   9. Observe the output: Compare your output with the "Desired Output" shown above.
-   10. Discussion (Notable Observations):  
-   - Why is it essential to convert the input to the correct data type? What would happen if you tried to perform arithmetic operations on the string input directly?
-   - Explain the difference between %d, %.2f, and %s in old-style formatting.
-   - Explain how f-strings work. Why are they often preferred over old-style formatting? How do you format the decimal places in an f-string?
+   9. Run the code: Execute your Python code.
+   10. Observe the output: Compare your output with the "Desired Output" shown above.
+   11. Discussion (Notable Observations): Discuss all the points in the "Notable Observations" section.  Be sure to explain the full order of operations and how each operator behaves.  Give concrete examples of when you might use each of these operators.
 
 ### **Step 4: Push Changes to GitHub**
 Once you've completed your changes, follow these steps to upload your work to your GitHub repository.
