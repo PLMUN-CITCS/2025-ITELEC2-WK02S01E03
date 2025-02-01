@@ -94,7 +94,7 @@ Result of a / b: 2.0
 Result of a // b (floor division): 2
 Result of a % b (modulus): 0
 Result of a ** c (exponentiation): 1000
-Result of (a + b - c) * (a / b): 30.0
+Result of (a + b - c) * (a / b): 24.0
 ```
       
    **Notable Observations (to be discussed after completing the exercise):**
