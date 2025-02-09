@@ -1,4 +1,4 @@
-# 2025-ITELEC2-WK02S01E03
+# 2025-ITELEC2-LAB005
 Week 02 - Python Variables, Operators and I/O Statements
 
 Laboratory # 05 - Arithmetic Operators and Operator Precedence in Python
@@ -77,7 +77,7 @@ Only perform this if this is the first time you will setup your Git Environment
 
 ### **Step 3: Complete the Assignment**
 
-**Exercise # 03 - Arithmetic Operators and Operator Precedence in Python**
+**Laboratory # 05 - Arithmetic Operators and Operator Precedence in Python**
 
    **Objective:**
    - Familiarize you with Python's arithmetic operators (+, -, *, /, %, //, **).
